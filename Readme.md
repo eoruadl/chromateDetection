@@ -1,43 +1,49 @@
-# 6도그마 프로젝트 Repository
+# 크로메이트 도금 제품 양불 판정 서비스
 
 <br>
 
-<br><br>
+## 1. 프로젝트 소개
 
-# 1. 개인 디렉터리 방안
-
-<br>
-
-디렉터리는 본인 이름의 이니셜을 따서 개인화 합니다.
-
-> ex. 오찬해 => och/python.py , och/java.java ...
-
-개인 디렉터리는 원하는 파일을 저장하면 되지만 무거운 파일은 올리지 않습니다.
-
-<br><br>
-
-# 2. Issue 작성법
+> 크로메이트 도금 제품의 정확한 양불 판정으로 품질 균일화를 돕기위한 서비스를 개발하는 것을 목표로 하였습니다. <br><br>
+> 개발 기간 : 2022.10 ~ 2022.12 (약 3개월간) <br><br>
+> 멤버 : 총 4명(백엔드 1, 프론트엔드 1, 모델러 1, 데이터 1)
 
 <br>
 
-Issue를 작성할 때는 제목에 반드시 태그를 작성 합니다. 태그는 아래와 같이 정리합니다. commit message 또한 issue 제목과 일치 시킵니다.
+## 2. 주요 기능
 
-- [PAP] : 문서 정리 관련 태그
-- [FRT] : Front End 관련 작업 태그
-- [BCK] : Back End 관련 작업 태그
-- [OPS] : CI/CD 관련 작업 태그
-- [EDU] : 개인 학습 자료 관련 태그
-- [DAN] : 통계 분석, AI 관련 작업 태그
-- [DEG] : 데이터 수집, 저장 관련 작업 태그
+- tensorflow를 이용하여 생성한 CNN 모델을 서빙하여 업로드 되는 이미지 양불 판정
+- 업로드되는 이미지 정보와 회원정보를 MySQL DB에 적재
+- OAuth 2.0 프로토콜을 이용한 구글 소셜 로그인
+- Airflow를 이용한 로컬파일에 적재되는 이미지를 일단위로 배치 처리하여 HDFS에 적재
+- CI/CD툴인 Jenkins를 이용한 통합, 배포를 자동화 / Slack 연동을 통한 알림
 
 <br>
 
-> 예. [PAP][ops] Jenkins 사용법 문서 화 및 Groovy 수정 ==> 커밋 메시지로 사용
+## 3. 아키택처
 
-<br><br>
+<img>
 
-# 3. .gitignore 활용
+## 4. API 명세서
 
-<br>
+| 메소드 |           URI            |         설명         |
+| :----: | :----------------------: | :------------------: |
+|  POST  |         /signup          |       회원가입       |
+|  POST  |          /login          |        로그인        |
+|  POST  |         /logout          |       로그아웃       |
+|  POST  |       /oauth/login       |  구글 로그인 페이지  |
+|  GET   |     /oauth/callback      |     권한부여승인     |
+|  POST  |      /oauth/logout       |    구글 로그아웃     |
+|  GET   |          /main           |   판정 결과 리스트   |
+|  POST  |       /main/submit       |     이미지 판정      |
+|  GET   | /detail/<int:imginfo_id> | 판정 이미지 세부내용 |
 
-- <a href='https://github.com/och5351/Bigdata_busan/blob/develop/och/gitignore.md'> 활용법 설명 링크 </a>
+## 5. CNN 튜닝 과정 및 최종 모델 결과
+
+<img>
+
+## 6. Jenkins 자동 배포 시연 영상
+
+## 7. 개발 환경
+
+<img>
