@@ -1,6 +1,6 @@
 # 크로메이트 도금 제품 양불 판정 서비스
 
-<br>
+<p align="center"><img src="https://user-images.githubusercontent.com/108312272/220877097-204f45dd-b477-461d-b629-f3d29d1d86a2.png"></p>
 
 ## 1. 프로젝트 소개
 
@@ -20,11 +20,12 @@
 
 <br>
 
-## 3. 아키택처
+## 3. 아키텍처
 
-<img>
+<p align="center"><img src="https://user-images.githubusercontent.com/108312272/220878132-6c64f230-4fae-418b-b8fb-b42dbdf3b05e.png">
 
 ## 4. API 명세서
+<br>
 
 | 메소드 |           URI            |         설명         |
 | :----: | :----------------------: | :------------------: |
@@ -36,14 +37,18 @@
 |  POST  |      /oauth/logout       |    구글 로그아웃     |
 |  GET   |          /main           |   판정 결과 리스트   |
 |  POST  |       /main/submit       |     이미지 판정      |
-|  GET   | /detail/<int:imginfo_id> | 판정 이미지 세부내용 |
+|  GET   | /detail/<<int:imginfo_id>> | 판정 이미지 세부내용 |
+
+<br>
 
 ## 5. CNN 튜닝 과정 및 최종 모델 결과
+### CNN 튜닝 과정
+<p align=""><img src="https://user-images.githubusercontent.com/108312272/220878633-042c8d2c-ef83-4acf-90ef-71e2b6755801.png" width="500"></p>
 
-<img>
+### 최종 모델 결과
+<p align=""><img src="https://user-images.githubusercontent.com/108312272/220878704-0597782f-428e-4254-8d92-61c9f24ed22d.png" width="500"></p>
+<br>
 
 ## 6. Jenkins 자동 배포 시연 영상
-
-## 7. 개발 환경
-
-<img>
+<a href="https://www.youtube.com/watch?v=d_TsNDF6xps&ab_channel=eoruadl">영상 URL</a>
+<br>
